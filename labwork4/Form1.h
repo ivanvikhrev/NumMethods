@@ -84,11 +84,11 @@ namespace CppCLR_WinformsProjekt {
 
 	private: System::Windows::Forms::DataGridView^  dataGridViewT2;
 
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn1;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn2;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn3;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn4;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn5;
+
+
+
+
+
 	private: ZedGraph::ZedGraphControl^  GraphSolT2;
 	private: System::Windows::Forms::GroupBox^  groupBox3;
 	private: System::Windows::Forms::Label^  labelM_X;
@@ -109,16 +109,26 @@ namespace CppCLR_WinformsProjekt {
 
 
 	private: ZedGraph::ZedGraphControl^  GraphSolM;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn6;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn7;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn8;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn9;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn10;
+
+
+
+
+
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column1;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column2;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column3;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column4;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column5;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn1;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn3;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn4;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn5;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn6;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn7;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn8;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn9;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn10;
 
 
 
@@ -300,7 +310,7 @@ namespace CppCLR_WinformsProjekt {
 			this->textBoxT1_N->Name = L"textBoxT1_N";
 			this->textBoxT1_N->Size = System::Drawing::Size(40, 20);
 			this->textBoxT1_N->TabIndex = 3;
-			this->textBoxT1_N->Text = L"10";
+			this->textBoxT1_N->Text = L"8";
 			// 
 			// label_accuracy
 			// 
@@ -495,7 +505,7 @@ namespace CppCLR_WinformsProjekt {
 			// labelT2_Acc
 			// 
 			this->labelT2_Acc->AutoSize = true;
-			this->labelT2_Acc->Location = System::Drawing::Point(225, 82);
+			this->labelT2_Acc->Location = System::Drawing::Point(235, 82);
 			this->labelT2_Acc->Name = L"labelT2_Acc";
 			this->labelT2_Acc->Size = System::Drawing::Size(26, 13);
 			this->labelT2_Acc->TabIndex = 4;
@@ -507,6 +517,7 @@ namespace CppCLR_WinformsProjekt {
 			this->textBoxT2_N->Name = L"textBoxT2_N";
 			this->textBoxT2_N->Size = System::Drawing::Size(40, 20);
 			this->textBoxT2_N->TabIndex = 3;
+			this->textBoxT2_N->Text = L"8";
 			// 
 			// label9
 			// 
@@ -542,6 +553,7 @@ namespace CppCLR_WinformsProjekt {
 			this->ButtonT2_Clear->TabIndex = 10;
 			this->ButtonT2_Clear->Text = L"Clear";
 			this->ButtonT2_Clear->UseVisualStyleBackColor = true;
+			this->ButtonT2_Clear->Click += gcnew System::EventHandler(this, &Form1::ButtonT2_Clear_Click);
 			// 
 			// ButtonT2_Calc
 			// 
@@ -551,6 +563,7 @@ namespace CppCLR_WinformsProjekt {
 			this->ButtonT2_Calc->TabIndex = 9;
 			this->ButtonT2_Calc->Text = L"Calc";
 			this->ButtonT2_Calc->UseVisualStyleBackColor = true;
+			this->ButtonT2_Calc->Click += gcnew System::EventHandler(this, &Form1::ButtonT2_Calc_Click);
 			// 
 			// GraphErrT2
 			// 
@@ -616,11 +629,10 @@ namespace CppCLR_WinformsProjekt {
 			// 
 			// dataGridViewTextBoxColumn5
 			// 
-			this->dataGridViewTextBoxColumn5->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::DisplayedCells;
+			this->dataGridViewTextBoxColumn5->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->dataGridViewTextBoxColumn5->HeaderText = L"U(Xi) - V(Xi)";
 			this->dataGridViewTextBoxColumn5->Name = L"dataGridViewTextBoxColumn5";
 			this->dataGridViewTextBoxColumn5->ReadOnly = true;
-			this->dataGridViewTextBoxColumn5->Width = 86;
 			// 
 			// GraphSolT2
 			// 
@@ -711,6 +723,7 @@ namespace CppCLR_WinformsProjekt {
 			this->textBoxM_N->Name = L"textBoxM_N";
 			this->textBoxM_N->Size = System::Drawing::Size(40, 20);
 			this->textBoxM_N->TabIndex = 3;
+			this->textBoxM_N->Text = L"8";
 			// 
 			// label14
 			// 
@@ -747,6 +760,7 @@ namespace CppCLR_WinformsProjekt {
 			this->ButtonM_Clear->TabIndex = 16;
 			this->ButtonM_Clear->Text = L"Clear";
 			this->ButtonM_Clear->UseVisualStyleBackColor = true;
+			this->ButtonM_Clear->Click += gcnew System::EventHandler(this, &Form1::ButtonM_Clear_Click);
 			// 
 			// ButtonM_Calc
 			// 
@@ -756,6 +770,7 @@ namespace CppCLR_WinformsProjekt {
 			this->ButtonM_Calc->TabIndex = 15;
 			this->ButtonM_Calc->Text = L"Calc";
 			this->ButtonM_Calc->UseVisualStyleBackColor = true;
+			this->ButtonM_Calc->Click += gcnew System::EventHandler(this, &Form1::ButtonM_Calc_Click);
 			// 
 			// GraphErrM
 			// 
@@ -821,11 +836,10 @@ namespace CppCLR_WinformsProjekt {
 			// 
 			// dataGridViewTextBoxColumn10
 			// 
-			this->dataGridViewTextBoxColumn10->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::DisplayedCells;
+			this->dataGridViewTextBoxColumn10->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->dataGridViewTextBoxColumn10->HeaderText = L"V(Xi) - V2(Xi)";
 			this->dataGridViewTextBoxColumn10->Name = L"dataGridViewTextBoxColumn10";
 			this->dataGridViewTextBoxColumn10->ReadOnly = true;
-			this->dataGridViewTextBoxColumn10->Width = 91;
 			// 
 			// GraphSolM
 			// 
@@ -1007,7 +1021,7 @@ private: System::Void ButtonT1_Calc_Click(System::Object^  sender, System::Event
 			dataGridViewT1->Rows[i]->Cells[1]->Value = T.x[i];
 			dataGridViewT1->Rows[i]->Cells[2]->Value = T.u[i];
 			dataGridViewT1->Rows[i]->Cells[3]->Value = T.v[i];
-			dataGridViewT1->Rows[i]->Cells[4]->Value =diff;
+			dataGridViewT1->Rows[i]->Cells[4]->Value = diff;
 			if (abs(diff) > max) { max = abs(diff); xErr = T.x[i]; }
 			graphU->Add(T.x[i], T.u[i]);
 			graphV->Add(T.x[i], T.v[i]);
@@ -1019,6 +1033,103 @@ private: System::Void ButtonT1_Calc_Click(System::Object^  sender, System::Event
 	}
 
 
+private: System::Void ButtonT2_Calc_Click(System::Object^  sender, System::EventArgs^  e) {
+	ButtonT2_Clear_Click(sender, e);
+	PointPairList^ graphU = gcnew ZedGraph::PointPairList();
+	PointPairList^ graphV = gcnew ZedGraph::PointPairList();
+	PointPairList^ graphE = gcnew ZedGraph::PointPairList();;
+	int N = Convert::ToInt32(textBoxT2_N->Text);
+	Test2 T(N);
+	T.ThomasAlgoritm();
+	double diff = 0;
+	double max = abs(T.u[0] - T.v[0]);
+	double xErr = T.x[0];
+	for (int i = 0; i <= T.n; i++) {
+		diff = (T.u[i] - T.v[i]);
+		dataGridViewT2->Rows->Add();
+		dataGridViewT2->Rows[i]->Cells[0]->Value = i;
+		dataGridViewT2->Rows[i]->Cells[1]->Value = T.x[i];
+		dataGridViewT2->Rows[i]->Cells[2]->Value = T.u[i];
+		dataGridViewT2->Rows[i]->Cells[3]->Value = T.v[i];
+		dataGridViewT2->Rows[i]->Cells[4]->Value = diff;
+		if (abs(diff) > max) { max = abs(diff); xErr = T.x[i]; }
+		graphU->Add(T.x[i], T.u[i]);
+		graphV->Add(T.x[i], T.v[i]);
+		graphE->Add(T.x[i], diff);
+	}
+	drawgraph(graphU, graphV, graphE, GraphSolT2, GraphErrT2);
+	labelT2_Acc->Text = Convert::ToString(max);
+	labelT2_X->Text = Convert::ToString(xErr);
+}
+private: System::Void ButtonT2_Clear_Click(System::Object^  sender, System::EventArgs^  e) {
+	GraphPane^ panel = GraphSolT2->GraphPane;
+	GraphPane^ panel2 = GraphErrT2->GraphPane;
+	if (panel->CurveList->Count > 0)
+	{
+		panel->CurveList->Clear();
+		GraphSolT2->AxisChange();
+		GraphSolT2->Invalidate();
+	}
+	if (panel2->CurveList->Count > 0)
+	{
+		panel2->CurveList->Clear();
+		GraphErrT2->AxisChange();
+		GraphErrT2->Invalidate();
+	}
+	dataGridViewT2->Rows->Clear();
+	labelT2_Acc->Text = "...";
+	labelT2_X->Text = "...";
+}
+private: System::Void ButtonM_Calc_Click(System::Object^  sender, System::EventArgs^  e) {
+	ButtonM_Clear_Click(sender, e);
+	PointPairList^ graphU = gcnew ZedGraph::PointPairList();
+	PointPairList^ graphV = gcnew ZedGraph::PointPairList();
+	PointPairList^ graphE = gcnew ZedGraph::PointPairList();;
+	int N = Convert::ToInt32(textBoxM_N->Text);
+	Test3  T(N);
+	Test3  T2(2 * N);
+	T.ThomasAlgoritm();
+	T2.ThomasAlgoritm();
+	double diff = 0;
+	double max = abs(T2.v[0] - T.v[0]);
+	double xErr = T.x[0];
+	for (int i = 0; i <= T.n; i++) {
+		diff = (T2.v[2*i] - T.v[i]);
+		dataGridViewM->Rows->Add();
+		dataGridViewM->Rows[i]->Cells[0]->Value = i;
+		dataGridViewM->Rows[i]->Cells[1]->Value = T.x[i];
+		dataGridViewM->Rows[i]->Cells[2]->Value = T.v[i];
+		dataGridViewM->Rows[i]->Cells[3]->Value = T2.v[2*i];
+		dataGridViewM->Rows[i]->Cells[4]->Value = diff;
+		if (abs(diff) > max) { max = abs(diff); xErr = T.x[i]; }
+		graphU->Add(T.x[i], T2.v[2*i]);
+		graphV->Add(T.x[i], T.v[i]);
+		graphE->Add(T.x[i], diff);
+	}
+	drawgraph(graphU, graphV, graphE, GraphSolM, GraphErrM);
+	labelM_Acc->Text = Convert::ToString(max);
+	labelM_X->Text = Convert::ToString(xErr);
+
+}
+private: System::Void ButtonM_Clear_Click(System::Object^  sender, System::EventArgs^  e) {
+	GraphPane^ panel = GraphSolM->GraphPane;
+	GraphPane^ panel2 = GraphErrM->GraphPane;
+	if (panel->CurveList->Count > 0)
+	{
+		panel->CurveList->Clear();
+		GraphSolM->AxisChange();
+		GraphSolM->Invalidate();
+	}
+	if (panel2->CurveList->Count > 0)
+	{
+		panel2->CurveList->Clear();
+		GraphErrM->AxisChange();
+		GraphErrM->Invalidate();
+	}
+	dataGridViewM->Rows->Clear();
+	labelM_Acc->Text = "...";
+	labelM_X->Text = "...";
+}
 };
 
 }

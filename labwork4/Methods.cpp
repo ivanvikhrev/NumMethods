@@ -1,26 +1,24 @@
 #include "stdafx.h"
 
 void Task::CreateCoeffs() {
-	gamma = new double[n + 1];
-	beta = new double[n + 1];
-	alpha = new double[n + 1];
-	gamma[0] = b[0];
-	beta[0] = 0; //d[0]/gamma[0];
-	alpha[0] = 0;//-c[0] / gamma[0];
-	for( int i = 1; i <= n ; i++){
-		gamma[i] = b[i]-alpha[i - 1];//b[i] + a[i] * alpha[i-1];
-		alpha[i] = 1/gamma[i];//-c[i] / gamma[i];
-		beta[i] = (d[i] + beta[i - 1]) / gamma[i];//(d[i] - alpha[i] * beta[i - 1]) / gamma[i];
-		//alpha[i] = b[i - 1] / (c[i - 1] - alpha[i - 1] * a[i - 1]);
-		//beta[i] = (-d[i - 1] + beta[i - 1] * a[i - 1]) / (c[i - 1] - alpha[i - 1] * a[i - 1]);
+
+	beta = new double[n];
+	alpha = new double[n];
+	alpha[0] = kappa1;
+	beta[0] = mu1;
+	for( int i = 0; i < n-1 ; i++){
+	 
+		alpha[i+1] = B[i] / (C[i] - alpha[i] * A[i]);
+		beta[i+1] = (F[i]+beta[i] * A[i]) / (C[i] - alpha[i] * A[i]);
 	}
+
 }
 
 void Task::ThomasAlgoritm() {
 	
 	CreateCoeffs();
 
-	v[n] = 1;//beta[n];
+	v[n] = (mu2 + beta[n - 1] * kappa2) / (1 - alpha[n - 1] * kappa2);
 	for (int i = n-1; i >= 0; i--) {
 		v[i] = alpha[i] * v[i + 1] + beta[i];
 	}
