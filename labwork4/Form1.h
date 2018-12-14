@@ -129,6 +129,18 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn8;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn9;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn10;
+private: System::Windows::Forms::Label^  label18;
+private: System::Windows::Forms::Label^  label17;
+private: System::Windows::Forms::Label^  label13;
+private: System::Windows::Forms::Label^  label5;
+private: System::Windows::Forms::Label^  label22;
+private: System::Windows::Forms::Label^  label19;
+private: System::Windows::Forms::Label^  label20;
+private: System::Windows::Forms::Label^  label21;
+private: System::Windows::Forms::Label^  label23;
+private: System::Windows::Forms::Label^  label24;
+private: System::Windows::Forms::Label^  label25;
+private: System::Windows::Forms::Label^  label26;
 
 
 
@@ -211,6 +223,18 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			this->dataGridViewTextBoxColumn9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->dataGridViewTextBoxColumn10 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->GraphSolM = (gcnew ZedGraph::ZedGraphControl());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->label21 = (gcnew System::Windows::Forms::Label());
+			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->label23 = (gcnew System::Windows::Forms::Label());
+			this->label24 = (gcnew System::Windows::Forms::Label());
+			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->groupBox1->SuspendLayout();
@@ -238,9 +262,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			// 
 			this->tabPage1->Controls->Add(this->groupBox1);
 			this->tabPage1->Controls->Add(this->ButtonT1_Clear);
-			this->tabPage1->Controls->Add(this->ButtonT1_Calc);
 			this->tabPage1->Controls->Add(this->GraphErr);
 			this->tabPage1->Controls->Add(this->dataGridViewT1);
+			this->tabPage1->Controls->Add(this->ButtonT1_Calc);
 			this->tabPage1->Controls->Add(this->GraphSol);
 			this->tabPage1->Location = System::Drawing::Point(4, 22);
 			this->tabPage1->Name = L"tabPage1";
@@ -252,6 +276,10 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->Controls->Add(this->label18);
+			this->groupBox1->Controls->Add(this->label17);
+			this->groupBox1->Controls->Add(this->label13);
+			this->groupBox1->Controls->Add(this->label5);
 			this->groupBox1->Controls->Add(this->labelT1_X);
 			this->groupBox1->Controls->Add(this->label4);
 			this->groupBox1->Controls->Add(this->label3);
@@ -260,9 +288,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			this->groupBox1->Controls->Add(this->label_accuracy);
 			this->groupBox1->Controls->Add(this->label2);
 			this->groupBox1->Controls->Add(this->label1);
-			this->groupBox1->Location = System::Drawing::Point(6, 242);
+			this->groupBox1->Location = System::Drawing::Point(6, 192);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(549, 243);
+			this->groupBox1->Size = System::Drawing::Size(527, 243);
 			this->groupBox1->TabIndex = 5;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Справка";
@@ -310,7 +338,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			this->textBoxT1_N->Name = L"textBoxT1_N";
 			this->textBoxT1_N->Size = System::Drawing::Size(40, 20);
 			this->textBoxT1_N->TabIndex = 3;
-			this->textBoxT1_N->Text = L"8";
+			this->textBoxT1_N->Text = L"10";
 			// 
 			// label_accuracy
 			// 
@@ -340,21 +368,21 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			// 
 			// ButtonT1_Clear
 			// 
-			this->ButtonT1_Clear->Location = System::Drawing::Point(177, 183);
+			this->ButtonT1_Clear->Location = System::Drawing::Point(225, 477);
 			this->ButtonT1_Clear->Name = L"ButtonT1_Clear";
 			this->ButtonT1_Clear->Size = System::Drawing::Size(156, 34);
 			this->ButtonT1_Clear->TabIndex = 4;
-			this->ButtonT1_Clear->Text = L"Clear";
+			this->ButtonT1_Clear->Text = L"Очистить";
 			this->ButtonT1_Clear->UseVisualStyleBackColor = true;
 			this->ButtonT1_Clear->Click += gcnew System::EventHandler(this, &Form1::ButtonT1_Clear_Click);
 			// 
 			// ButtonT1_Calc
 			// 
-			this->ButtonT1_Calc->Location = System::Drawing::Point(6, 183);
+			this->ButtonT1_Calc->Location = System::Drawing::Point(35, 477);
 			this->ButtonT1_Calc->Name = L"ButtonT1_Calc";
 			this->ButtonT1_Calc->Size = System::Drawing::Size(156, 34);
 			this->ButtonT1_Calc->TabIndex = 3;
-			this->ButtonT1_Calc->Text = L"Calc";
+			this->ButtonT1_Calc->Text = L"Счет";
 			this->ButtonT1_Calc->UseVisualStyleBackColor = true;
 			this->ButtonT1_Calc->Click += gcnew System::EventHandler(this, &Form1::ButtonT1_Calc_Click);
 			// 
@@ -459,6 +487,10 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			// 
 			// groupBox2
 			// 
+			this->groupBox2->Controls->Add(this->label22);
+			this->groupBox2->Controls->Add(this->label19);
+			this->groupBox2->Controls->Add(this->label20);
+			this->groupBox2->Controls->Add(this->label21);
 			this->groupBox2->Controls->Add(this->labelT2_X);
 			this->groupBox2->Controls->Add(this->label6);
 			this->groupBox2->Controls->Add(this->label7);
@@ -467,9 +499,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			this->groupBox2->Controls->Add(this->label9);
 			this->groupBox2->Controls->Add(this->label10);
 			this->groupBox2->Controls->Add(this->label11);
-			this->groupBox2->Location = System::Drawing::Point(5, 244);
+			this->groupBox2->Location = System::Drawing::Point(5, 195);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(549, 243);
+			this->groupBox2->Size = System::Drawing::Size(527, 243);
 			this->groupBox2->TabIndex = 11;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Справка";
@@ -517,7 +549,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			this->textBoxT2_N->Name = L"textBoxT2_N";
 			this->textBoxT2_N->Size = System::Drawing::Size(40, 20);
 			this->textBoxT2_N->TabIndex = 3;
-			this->textBoxT2_N->Text = L"8";
+			this->textBoxT2_N->Text = L"80";
 			// 
 			// label9
 			// 
@@ -547,21 +579,21 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			// 
 			// ButtonT2_Clear
 			// 
-			this->ButtonT2_Clear->Location = System::Drawing::Point(176, 185);
+			this->ButtonT2_Clear->Location = System::Drawing::Point(209, 474);
 			this->ButtonT2_Clear->Name = L"ButtonT2_Clear";
 			this->ButtonT2_Clear->Size = System::Drawing::Size(156, 34);
 			this->ButtonT2_Clear->TabIndex = 10;
-			this->ButtonT2_Clear->Text = L"Clear";
+			this->ButtonT2_Clear->Text = L"Очистить";
 			this->ButtonT2_Clear->UseVisualStyleBackColor = true;
 			this->ButtonT2_Clear->Click += gcnew System::EventHandler(this, &Form1::ButtonT2_Clear_Click);
 			// 
 			// ButtonT2_Calc
 			// 
-			this->ButtonT2_Calc->Location = System::Drawing::Point(5, 185);
+			this->ButtonT2_Calc->Location = System::Drawing::Point(10, 474);
 			this->ButtonT2_Calc->Name = L"ButtonT2_Calc";
 			this->ButtonT2_Calc->Size = System::Drawing::Size(156, 34);
 			this->ButtonT2_Calc->TabIndex = 9;
-			this->ButtonT2_Calc->Text = L"Calc";
+			this->ButtonT2_Calc->Text = L"Счет";
 			this->ButtonT2_Calc->UseVisualStyleBackColor = true;
 			this->ButtonT2_Calc->Click += gcnew System::EventHandler(this, &Form1::ButtonT2_Calc_Click);
 			// 
@@ -666,6 +698,10 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			// 
 			// groupBox3
 			// 
+			this->groupBox3->Controls->Add(this->label23);
+			this->groupBox3->Controls->Add(this->label24);
+			this->groupBox3->Controls->Add(this->label25);
+			this->groupBox3->Controls->Add(this->label26);
 			this->groupBox3->Controls->Add(this->labelM_X);
 			this->groupBox3->Controls->Add(this->label8);
 			this->groupBox3->Controls->Add(this->label12);
@@ -674,9 +710,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			this->groupBox3->Controls->Add(this->label14);
 			this->groupBox3->Controls->Add(this->label15);
 			this->groupBox3->Controls->Add(this->label16);
-			this->groupBox3->Location = System::Drawing::Point(5, 244);
+			this->groupBox3->Location = System::Drawing::Point(5, 205);
 			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Size = System::Drawing::Size(549, 243);
+			this->groupBox3->Size = System::Drawing::Size(547, 243);
 			this->groupBox3->TabIndex = 17;
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"Справка";
@@ -754,21 +790,21 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			// 
 			// ButtonM_Clear
 			// 
-			this->ButtonM_Clear->Location = System::Drawing::Point(176, 185);
+			this->ButtonM_Clear->Location = System::Drawing::Point(209, 474);
 			this->ButtonM_Clear->Name = L"ButtonM_Clear";
 			this->ButtonM_Clear->Size = System::Drawing::Size(156, 34);
 			this->ButtonM_Clear->TabIndex = 16;
-			this->ButtonM_Clear->Text = L"Clear";
+			this->ButtonM_Clear->Text = L"Очистить";
 			this->ButtonM_Clear->UseVisualStyleBackColor = true;
 			this->ButtonM_Clear->Click += gcnew System::EventHandler(this, &Form1::ButtonM_Clear_Click);
 			// 
 			// ButtonM_Calc
 			// 
-			this->ButtonM_Calc->Location = System::Drawing::Point(5, 185);
+			this->ButtonM_Calc->Location = System::Drawing::Point(29, 474);
 			this->ButtonM_Calc->Name = L"ButtonM_Calc";
 			this->ButtonM_Calc->Size = System::Drawing::Size(156, 34);
 			this->ButtonM_Calc->TabIndex = 15;
-			this->ButtonM_Calc->Text = L"Calc";
+			this->ButtonM_Calc->Text = L"Счет";
 			this->ButtonM_Calc->UseVisualStyleBackColor = true;
 			this->ButtonM_Calc->Click += gcnew System::EventHandler(this, &Form1::ButtonM_Calc_Click);
 			// 
@@ -799,7 +835,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			this->dataGridViewM->Name = L"dataGridViewM";
 			this->dataGridViewM->ReadOnly = true;
 			this->dataGridViewM->RowHeadersVisible = false;
-			this->dataGridViewM->Size = System::Drawing::Size(527, 171);
+			this->dataGridViewM->Size = System::Drawing::Size(545, 171);
 			this->dataGridViewM->TabIndex = 13;
 			// 
 			// dataGridViewTextBoxColumn6
@@ -854,6 +890,114 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 			this->GraphSolM->ScrollMinY2 = 0;
 			this->GraphSolM->Size = System::Drawing::Size(475, 274);
 			this->GraphSolM->TabIndex = 12;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(183, 139);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(116, 13);
+			this->label5->TabIndex = 8;
+			this->label5->Text = L"Точное решение : x^2";
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Location = System::Drawing::Point(6, 139);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(140, 13);
+			this->label13->TabIndex = 9;
+			this->label13->Text = L"Задача: u\'\'(x) - u(x) = -x^2+2";
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Location = System::Drawing::Point(6, 166);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(43, 13);
+			this->label17->TabIndex = 10;
+			this->label17->Text = L"u(0) = 1";
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(5, 183);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(46, 13);
+			this->label18->TabIndex = 11;
+			this->label18->Text = L"u(1) = 0 ";
+			// 
+			// label19
+			// 
+			this->label19->AutoSize = true;
+			this->label19->Location = System::Drawing::Point(-1, 190);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(46, 13);
+			this->label19->TabIndex = 14;
+			this->label19->Text = L"u(1) = 0 ";
+			// 
+			// label20
+			// 
+			this->label20->AutoSize = true;
+			this->label20->Location = System::Drawing::Point(0, 173);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(43, 13);
+			this->label20->TabIndex = 13;
+			this->label20->Text = L"u(0) = 1";
+			// 
+			// label21
+			// 
+			this->label21->AutoSize = true;
+			this->label21->Location = System::Drawing::Point(0, 146);
+			this->label21->Name = L"label21";
+			this->label21->Size = System::Drawing::Size(203, 13);
+			this->label21->TabIndex = 12;
+			this->label21->Text = L"Задача: d/dx(k(x) * u\'*(x)) - q(x)*u(x) = -f(x)";
+			// 
+			// label22
+			// 
+			this->label22->AutoSize = true;
+			this->label22->Location = System::Drawing::Point(225, 146);
+			this->label22->Name = L"label22";
+			this->label22->Size = System::Drawing::Size(36, 13);
+			this->label22->TabIndex = 15;
+			this->label22->Text = L"0<x<1";
+			// 
+			// label23
+			// 
+			this->label23->AutoSize = true;
+			this->label23->Location = System::Drawing::Point(230, 140);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(36, 13);
+			this->label23->TabIndex = 19;
+			this->label23->Text = L"0<x<1";
+			// 
+			// label24
+			// 
+			this->label24->AutoSize = true;
+			this->label24->Location = System::Drawing::Point(4, 184);
+			this->label24->Name = L"label24";
+			this->label24->Size = System::Drawing::Size(46, 13);
+			this->label24->TabIndex = 18;
+			this->label24->Text = L"u(1) = 0 ";
+			// 
+			// label25
+			// 
+			this->label25->AutoSize = true;
+			this->label25->Location = System::Drawing::Point(5, 167);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(43, 13);
+			this->label25->TabIndex = 17;
+			this->label25->Text = L"u(0) = 1";
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Location = System::Drawing::Point(5, 140);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(203, 13);
+			this->label26->TabIndex = 16;
+			this->label26->Text = L"Задача: d/dx(k(x) * u\'*(x)) - q(x)*u(x) = -f(x)";
 			// 
 			// Form1
 			// 
